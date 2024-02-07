@@ -36,9 +36,9 @@ const App = () => {
               onUsernameChange={handleUsernameChange}
               onPasswordChange={handlePasswordChange} />} />
             <Route path="/adm/dashboard" element={<AdminDashBoard />} />
-            <Route path="/superlogin" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/test" element={<AdminList />} />
-            <Route path="/" element={<Chatbot username={username} password={password} />} />
+            <Route path="/chat" element={<Chatbot username={username} password={password} />} />
           </Routes>
         </BrowserRouter>
       </>
