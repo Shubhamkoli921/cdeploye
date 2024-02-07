@@ -3,7 +3,7 @@ import { TbSofa } from "react-icons/tb";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { FaShop } from "react-icons/fa6";
 import { ImStatsBars } from "react-icons/im";
-import Report from "./report";
+// import Report from "./report";
 import {
   LineChart,
   Line,
