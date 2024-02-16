@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/chatbot.jsx"
+  status = 200
