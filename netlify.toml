@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/chatbot.jsx"
+  to = "/chat/:adminId"
   status = 200
