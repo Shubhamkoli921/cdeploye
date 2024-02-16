@@ -19,7 +19,7 @@ function Login({ updateToken, updateAdminId }) {
     const superAdmin = { username: username, password: password };
 
     axios.post(
-      loginType === 'admin' ? 'http://localhost:8000/login' : 'http://localhost:8000/superadmin/login',
+      loginType === 'admin' ? 'https://chatbotserver1.onrender.com/login' : 'https://chatbotserver1.onrender.com/superadmin/login',
       loginType === 'admin' ? admin : superAdmin
     )
       .then(response => {
