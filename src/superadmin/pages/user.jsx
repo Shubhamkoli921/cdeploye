@@ -67,12 +67,12 @@ const User = () => {
       }
       const data = await response.json();
       setAdmins(data.admins);
-      setFormData(prevFormData => ({ ...prevFormData, chatbotLink: data.chatbot_link }));
+      setFormData({ ...formData, chatbotLink: data.chatbot_link });
       dispatch(updateChatbotLink(data.chatbotLinks));// setChatbotLink(data.chatbot_link); // Set the chatbot link received from the server
     } catch (error) {
       console.error('Error fetching admins:', error);
     }
-  }, [token,dispatch]);
+  }, [token,dispatch,formData]);
 
   useEffect(() => {
     if (token) {
