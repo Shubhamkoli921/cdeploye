@@ -27,7 +27,7 @@ const DashBoardData = ({ token }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/chat/stats", {
+        const response = await axios.get("https://chatbotserver1.onrender.com/chat/stats", {
           headers: {
             Authorization: `Bearer ${token}`,
           }
