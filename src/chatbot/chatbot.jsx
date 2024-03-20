@@ -25,30 +25,7 @@ const Chat = () => {
     fetchChatbotLinks();
   }, [dispatch, navigate, adminId]);
 
-  // Fetch chatbot links
-
-
-  // const parseMessageText = (text) => {
-  //   try {
-  //     const jsonData = JSON.parse(text);
-
-  //     if (Array.isArray(jsonData)) {
-  //       return (
-  //         <ul>
-  //           {jsonData.map((item, index) => (
-  //             <li key={index}>
-  //               <strong>Product Name:</strong> {item.productName}, <strong>Price:</strong> {item.price}, <strong>Description:</strong> {item.description}
-  //             </li>
-  //           ))}
-  //         </ul>
-  //       );
-  //     } else {
-  //       return <div>{text}</div>; // Render the text as is if it's not an array
-  //     }
-  //   } catch (error) {
-  //     return <div>{text}</div>; // Render the text as is if there's an error parsing it
-  //   }
-  // };
+  
 
 
   const fetchChatbotLinks = async () => {
@@ -201,13 +178,13 @@ const Chat = () => {
           <img className="w-full" src={png} alt="img" />
         </div>
         <div className="text-white">
-          <h1>Hii user</h1>
+          <h1>Hii {userName}</h1>
           <span>i'm here to help, so if you have any question, go ahead and ask me!</span>
         </div>
       </div>
       {/* Chat container */}
       {/* // Inside the Chat component's return statement */}
-      <div id="chat-container" className="flex-1 overflow-y-auto bg-slate-100 p-4">
+      <div id="chat-container" className="flex-1 overflow-y-auto bg-slate-100 p-4" style={{scrollbarWidth: 'none'}}>
         {messages.map((message, index) => (
           <div key={index} className={`mb-2 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className="w-auto flex">
